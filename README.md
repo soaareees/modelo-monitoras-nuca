@@ -60,26 +60,29 @@ Se estiver rodando no **PythonAnywhere** ou em sua máquina local, certifique-se
 # Ativar o ambiente (caso não esteja)
 source venv/bin/activate
 
+
 # Rodar o bot
 python3 main.py
 
+```
+
 ## Estrutura do Projeto
 
-*   **`src/api/`**: Motores de comunicação com a API da Brasil Júnior.
-*   **`src/models/`**: Definição de como os dados (Contratos) são organizados.
-*   **`src/services/`**: Toda a inteligência de processamento e conexão com o Google Sheets.
-*   **`src/auth.py`**: Gerencia o login e a geração das chaves de acesso.
-*   **`src/config.py`**: Lê e valida as configurações que você colocou no arquivo `.env`.
-*   **`main.py`**: O coração do bot que coordena todos os fluxos de dados.
+- **`src/api/`**: Motores de comunicação com a API da Brasil Júnior.
+- **`src/models/`**: Definição de como os dados (Contratos) são organizados.
+- **`src/services/`**: Toda a inteligência de processamento e conexão com o Google Sheets.
+- **`src/auth.py`**: Gerencia o login e a geração das chaves de acesso.
+- **`src/config.py`**: Lê e valida as configurações que você colocou no arquivo `.env`.
+- **`main.py`**: O coração do bot que coordena todos os fluxos de dados.
 
 ---
 
 ## Deu algo errado? (Troubleshooting)
 
-*   **Erro 403 (Acesso Negado)**: Verifique se você compartilhou a planilha com o e-mail do robô (passo 5 das credenciais) como **Editor**.
-*   **Erro de Login (401)**: Verifique se o CPF e a Senha no arquivo `.env` estão corretos.
-*   **Módulo não encontrado**: Você esqueceu de rodar o comando `pip install -r requirements.txt` ou de ativar o seu ambiente virtual (`venv`).
-*   **Erro 504 (Timeout)**: O portal da BJ pode estar instável ou sobrecarregado. Aguarde alguns minutos e tente rodar o bot novamente.
+- **Erro 403 (Acesso Negado)**: Verifique se você compartilhou a planilha com o e-mail do robô (passo 5 das credenciais) como **Editor**.
+- **Erro de Login (401)**: Verifique se o CPF e a Senha no arquivo `.env` estão corretos.
+- **Módulo não encontrado**: Você esqueceu de rodar o comando `pip install -r requirements.txt` ou de ativar o seu ambiente virtual (`venv`).
+- **Erro 504 (Timeout)**: O portal da BJ pode estar instável ou sobrecarregado. Aguarde alguns minutos e tente rodar o bot novamente.
 
 ---
 
@@ -100,27 +103,30 @@ Ao compartilhar este repositório, lembre-se de que o arquivo **`.env`** e o **`
 Para que o bot tenha permissão de escrever na sua planilha, siga estas etapas no **Google Cloud Console**:
 
 1.  **Criar o Projeto**:
-    *   Acesse o [Google Cloud Console](https://console.cloud.google.com/).
-    *   Clique em **Selecionar um projeto** > **Novo Projeto**.
-    *   Dê um nome (ex: `Monitoras-NuCa`) e clique em **Criar**.
+    - Acesse o [Google Cloud Console](https://console.cloud.google.com/).
+    - Clique em **Selecionar um projeto** > **Novo Projeto**.
+    - Dê um nome (ex: `Monitoras-NuCa`) e clique em **Criar**.
 
 2.  **Ativar as APIs**:
-    *   No menu lateral, vá em **APIs e Serviços** > **Biblioteca**.
-    *   Pesquise e ative a **Google Sheets API**.
-    *   Pesquise e ative a **Google Drive API**.
+    - No menu lateral, vá em **APIs e Serviços** > **Biblioteca**.
+    - Pesquise e ative a **Google Sheets API**.
+    - Pesquise e ative a **Google Drive API**.
 
 3.  **Criar a Conta de Serviço (O "perfil" do bot)**:
-    *   Vá em **APIs e Serviços** > **Credenciais**.
-    *   Clique em **+ Criar Credenciais** > **Conta de Serviço**.
-    *   Preencha o nome, clique em **Criar e Continuar** e depois em **Concluir**.
+    - Vá em **APIs e Serviços** > **Credenciais**.
+    - Clique em **+ Criar Credenciais** > **Conta de Serviço**.
+    - Preencha o nome, clique em **Criar e Continuar** e depois em **Concluir**.
 
 4.  **Gerar o arquivo `credentials.json`**:
-    *   Na lista de "Contas de Serviço", clique no ícone do **lápis** ao lado da conta criada.
-    *   Vá na aba **Chaves** (Keys) > **Adicionar Chave** > **Criar nova chave**.
-    *   Escolha o formato **JSON** e clique em **Criar**.
-    *   Renomeie o arquivo baixado para `credentials.json` e coloque-o na pasta raiz do projeto.
+    - Na lista de "Contas de Serviço", clique no ícone do **lápis** ao lado da conta criada.
+    - Vá na aba **Chaves** (Keys) > **Adicionar Chave** > **Criar nova chave**.
+    - Escolha o formato **JSON** e clique em **Criar**.
+    - Renomeie o arquivo baixado para `credentials.json` e coloque-o na pasta raiz do projeto.
 
 5.  **Liberar acesso na Planilha**:
-    *   Abra o arquivo `credentials.json`, localize o campo `"client_email"` e copie o endereço de e-mail (terminado em `.gserviceaccount.com`).
-    *   Vá na sua planilha do Google, clique em **Compartilhar** e adicione esse e-mail como **Editor**.
+    - Abra o arquivo `credentials.json`, localize o campo `"client_email"` e copie o endereço de e-mail (terminado em `.gserviceaccount.com`).
+    - Vá na sua planilha do Google, clique em **Compartilhar** e adicione esse e-mail como **Editor**.
+
+```
+
 ```
