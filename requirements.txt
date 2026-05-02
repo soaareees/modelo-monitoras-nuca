@@ -1,0 +1,7 @@
+requests
+python-dotenv
+gspread
+google-auth
+
+# Para rodar o bot, você precisa instalar as dependências listadas neste arquivo. Você pode fazer isso usando pip:
+# Digite: pip install -r requirements.txt
