@@ -1,4 +1,4 @@
-# Bot de Monitoramento - Núcleo/Instância [Nome do seu Núcleo/Instância]
+# Bot de Monitoramento - Núcleo Campinas (NuCa)
 
 Este projeto é uma ferramenta de automação desenvolvida para facilitar a gestão de dados de **Instâncias do MEJ**. O bot se conecta à API da Brasil Júnior, coleta informações atualizadas e as organiza automaticamente em uma planilha do Google Sheets.
 
