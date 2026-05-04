@@ -24,7 +24,7 @@ Antes de começar, você vai precisar de:
 1. **Clonar o repositório:**
 
    ```bash
-   git clone [https://github.com/seu-usuario/modelo-monitoras-nuca.git](https://github.com/seu-usuario/modelo-monitoras-nuca.git)
+   git clone https://github.com/soaareees/modelo-monitoras-nuca.git
    cd modelo-monitoras-nuca
 
    ```
